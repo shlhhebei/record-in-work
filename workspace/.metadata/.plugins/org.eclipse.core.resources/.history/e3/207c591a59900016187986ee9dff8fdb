@@ -20,7 +20,7 @@ import util.FileOperateUtil;
 @RequestMapping(value = "/fileOperate")
 public class FileOperateController {
  
-	
+	/*TODO 返回ModelAndView的时候无法转到制定页面，反而去找@RequestMapping的参数的value值代表的路径*/
     @RequestMapping(value = "/to_upload",method = RequestMethod.POST)
     public String toUpload() {
       System.out.println("come to toUpload!");

@@ -20,17 +20,13 @@ import util.FileOperateUtil;
 @RequestMapping(value = "/fileOperate")
 public class FileOperateController {
  
-	
+	/*TODO 返回ModelAndView的时候无法转到制定页面，反而去找@RequestMapping的参数的value值代表的路径*/
     @RequestMapping(value = "/to_upload",method = RequestMethod.POST)
     public String toUpload() {
       System.out.println("come to toUpload!");
       return "fileOperate/upload";
     }
-    /**
-     * 下面注释的方法在当前环境配置下，返回的ModelAndView对象好像不起作用，
-     * 因为执行该方法后，系统查找的路径不是返回的ModelAndView对象指定的视图  upload.jsp
-     * 而是根据@RequestMapping映射的路径 ：to_upload 去查询to_upload.jsp
-     */
+    
     /*@RequestMapping(value = "/to_upload",method = RequestMethod.POST)
     public ModelAndView toUpload() {
       System.out.println("come to toUpload!");
